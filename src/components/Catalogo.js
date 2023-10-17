@@ -57,21 +57,18 @@ function Catalogo({ carrito, setCarrito }) {
       titulo: "N°612",
       imagen: "/CatalogoImages/Nro612.jpg",
     },
-    // Agrega más números de revista aquí
   ];
 
   const mostrarDetalles = (numeroRevista) => {
     navigate(`/revista/${numeroRevista.id}`);
   };
 
-  // Función para agregar un número de revista al carrito
   const agregarAlCarrito = (numeroRevista) => {
     const productoExistente = carrito.find(
       (item) => item.id === numeroRevista.id
     );
 
     if (productoExistente) {
-      // Si el producto ya está en el carrito, incrementa la cantidad
       const carritoActualizado = carrito.map((item) =>
         item.id === numeroRevista.id
           ? { ...item, cantidad: item.cantidad + 1 }
@@ -79,7 +76,6 @@ function Catalogo({ carrito, setCarrito }) {
       );
       setCarrito(carritoActualizado);
     } else {
-      // Si el producto no está en el carrito, agrégalo con cantidad 1
       setCarrito([...carrito, { ...numeroRevista, cantidad: 1 }]);
     }
   };

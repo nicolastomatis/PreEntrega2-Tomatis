@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css"; // Importa el archivo de estilos CSS
+import "../App.css";
 
 function Carrito({ carrito, setCarrito }) {
   const aumentarCantidad = (item) => {

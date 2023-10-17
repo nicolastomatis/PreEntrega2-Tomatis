@@ -7,7 +7,7 @@ function DetalleRevista() {
   return (
     <div>
       <h1>Detalles de la Revista {id}</h1>
-      {/* Mostrar detalles de la revista utilizando el ID */}
+      {}
     </div>
   );
 }

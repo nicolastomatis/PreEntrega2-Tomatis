@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -10,7 +9,6 @@ import DetalleRevista from "./components/DetalleRevista";
 import "./App.css";
 
 function App() {
-  // Define el estado carrito en el componente App
   const [carrito, setCarrito] = useState([]);
 
   return (
