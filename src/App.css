@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
+  font-family: roboto;
+  font-weight: 400;
+  color: #888;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  grid-area: header;
+  height: 80px;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px #9c9c9c;
+  /**/
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  /* */
+  top: 0px;
+  z-index: 99;
+  padding-left: 20%;
+  padding-right: 20%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header h1 {
+  font-family: roboto Slab;
+  font-size: 4rem;
+  color: #bbdbe3;
+  line-height: 100%;
+}
+header h1 strong {
+  color: #1660a7;
+}
+.carrito {
+  color: #1660a7;
+  font-size: 3rem;
+}
+header nav {
+  height: 40px;
+  /**/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: initial;
+  /**/
+  font-size: 1.5rem;
+}
+header ul {
+  /* */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /**/
+  list-style: none;
+  font-weight: 700;
+  background-color: #bbdbe3;
+  padding: 5px;
+  border-radius: 5px;
+}
+header ul li {
+  padding: 5px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 5px;
+  color: #1660a7;
+}
+header ul li a:hover {
+  background-color: #1660a7;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+/* Estilos para el catálogo */
+.catalogo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.catalogo h1 {
+  margin: 20px;
+  font-size: 3rem;
+}
+.catalogo-lista {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20%;
+  padding-right: 20%;
+  justify-content: space-between;
+}
+.carrito-lista {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+.carrito-lista h2 {
+  margin: 20px;
+  font-size: 3rem;
+}
+.carrito-lista ul li {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style: none;
+  font-size: 2rem;
+  width: auto;
+}
+.boton {
+  padding: 10px;
+  margin: 0px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.catalogo-item,
+.carrito-item {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.catalogo-item img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
 }
+
+.catalogo-titulo {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Estilos para el botón */
+.catalogo-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.catalogo-item button:hover {
+  background-color: #0056b3;
+}
+/** fin estilo catalogo **/
